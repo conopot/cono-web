@@ -8,6 +8,7 @@ const SecondHeroSection = (props: Props) => {
     <Section>
       <Section.Body>
         <Section.Title>코노팟은 이런 서비스에요.</Section.Title>
+        <div></div>
       </Section.Body>
     </Section>
   );
