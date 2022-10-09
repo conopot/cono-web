@@ -38,6 +38,10 @@ const HeroSection = ({ onClick }: Props) => {
         color: colors.white,
         scale: 1.2,
       })
+      .to(`#${HERO_SECTION}-subtitle-1`, {
+        color: colors.white,
+        scale: 1.2,
+      })
       .to(`#${HERO_SECTION}-scene-1`, {
         backgroundColor: colors.white,
         delay: 0.5,
@@ -82,10 +86,14 @@ const HeroSection = ({ onClick }: Props) => {
           <Section.Title id={`${HERO_SECTION}-title-2`}>
             "함께 부르는 사람에게 폐가 될 것 같아서"
           </Section.Title>
+          <Subtitle id={`${HERO_SECTION}-subtitle-1`}>
+            <p>노래방이 두려웠던 당신을 위해</p>
+            <p>코노팟은 끊임없이 고민했습니다.</p>
+          </Subtitle>
         </Contents>
         <Contents id={`${HERO_SECTION}-contents-2`}>
           <Section.Title id={`${HERO_SECTION}-title-3`}>
-            실력에 상관없이,
+            이제 실력에 상관없이,
             <br />
             동전과 열정만 들고 오세요.
           </Section.Title>
@@ -104,9 +112,10 @@ const HeroSection = ({ onClick }: Props) => {
           </Section.Title>
           <Spacing size={80} />
           <Button id={`${HERO_SECTION}-button-1`} onClick={onClick}>
-            내게 어울리는 가수 살펴보기
+            비슷한 목소리의 가수 찾아보기
           </Button>
         </Contents>
+        <Spacing size={80} />
       </Section.Body>
     </Section>
   );
@@ -121,6 +130,13 @@ const Contents = styled.div`
   flex-direction: column;
   position: absolute;
   text-align: center;
+`;
+
+const Subtitle = styled.div`
+  line-height: 1.5;
+  margin-top: 40px;
+  font-size: 22px;
+  font-weight: 700;
 `;
 
 export default HeroSection;

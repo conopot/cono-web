@@ -7,7 +7,7 @@ const SecondHeroSection = (props: Props) => {
   return (
     <Section>
       <Section.Body>
-        <Section.Title>모두의 코노를 위해, </Section.Title>
+        <Section.Title>코노팟은 이런 서비스에요.</Section.Title>
       </Section.Body>
     </Section>
   );

@@ -15,7 +15,7 @@ const Body = styled.div<{ center: boolean }>`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: ${({ center }) => (center ? "center" : `flex-start`)};
   padding-top: ${({ center }) => (center ? 0 : `120px`)};
   align-items: center;
   text-align: center;
