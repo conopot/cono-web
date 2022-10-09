@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const Section = styled.section<{ isAnimated: boolean; playLength: string }>`
+const Section = styled.section<{ isAnimated?: boolean; playLength?: string }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,7 +9,7 @@ const Section = styled.section<{ isAnimated: boolean; playLength: string }>`
     isAnimated ? `calc(${playLength})` : "auto"};
 `;
 
-const Body = styled.div<{ center: boolean }>`
+const Body = styled.div<{ center?: boolean }>`
   max-width: 960px;
   width: 100%;
   min-height: 100vh;
