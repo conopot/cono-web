@@ -4,6 +4,7 @@ import RootLayout from "../../layouts/RootLayout";
 import HeroSection from "./HeroSection";
 import RecorderSection from "./RecorderSection";
 import SecondHeroSection from "./SecondHeroSection";
+import ShareSection from "./ShareSection";
 
 type transitionStatus = "NONE" | "START" | "END";
 const TransitionTimeout = 500;
@@ -39,6 +40,7 @@ const RootPage = () => {
         <TransitionWrapper isTransitionEnd={transitionStatus === "END"}>
           <HeroSection onClick={ActivateRecorder} />
           <SecondHeroSection />
+          <ShareSection />
         </TransitionWrapper>
       ) : (
         <TransitionWrapper isTransitionEnd={transitionStatus === "END"}>
