@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import React, { useEffect } from "react";
 import Button from "../../../components/common/Button";
 import Section from "../../../components/common/Section";
+import Recorder from "./Recorder";
 
 type Props = {
   onClick?(): void;
@@ -36,16 +37,14 @@ const RecorderSection = ({ onClick }: Props) => {
         <SectionTitle id={`${RECORD_SECTION}-title-2`}>
           여러분의 목소리를 들려 주세요.
         </SectionTitle>
+        <Recorder />
         <ButtonContainer>
-          <RecordButton>녹음 시작하기</RecordButton>
-          <RecordButton onClick={onClick}>처음으로 돌아가기</RecordButton>
+          <Button onClick={onClick}>처음으로 돌아가기</Button>
         </ButtonContainer>
       </Section.Body>
     </Section>
   );
 };
-
-const RecordButton = styled(Button)``;
 
 const SectionTitle = styled(Section.Title)`
   font-size: 40px;
@@ -53,6 +52,7 @@ const SectionTitle = styled(Section.Title)`
 
 const ButtonContainer = styled.div`
   display: flex;
+  margin-top: 300px;
 
   button:first-of-type {
     margin-right: 20px;
